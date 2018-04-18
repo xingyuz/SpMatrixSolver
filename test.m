@@ -1,4 +1,5 @@
 clear all;
+rng default;
 G = mmread('fe_4elt2.mtx');  % read adjacency matrix of graph
 % A = mmread('fe_ocean.mtx');
 % A = mmread('fe_rotor.mtx');
@@ -9,4 +10,7 @@ I=speye(length(A));
 A=A+1e-1*I;
 x=sparse(rand(length(A),1)*1);
 b=A*x;
-[x itr] = jacobi(A,b);
+tic;[x1 itr1]=jacobi(A,b);toc;
+tic;[x2 itr2] = gauss_seidel(A,b);toc;
+tic;[x3 itr3] = conj_gradient(A, b);toc;
+
