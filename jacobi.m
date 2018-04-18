@@ -2,8 +2,8 @@ function [x itr] = jacobi(A,b);
 %% Jacobi method for solving sparse matrix
 % A=D+L+U
 D=diag(diag(A));  % Diagonoal matrix of A
-L=tril(A,-1);     % Lower triangle matrix of A
-U=triu(A,1);      % Upper triangle matrix of A
+L=tril(A,-1);     % Strictly lower triangle matrix of A
+U=triu(A,1);      % Strictly upper triangle matrix of A
 x0=sparse(zeros(length(A),1)); % Initial guess
 xi=x0;
 x1=1;
