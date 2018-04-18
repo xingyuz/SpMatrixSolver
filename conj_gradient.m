@@ -1,4 +1,4 @@
-function [x0 itr] = conj_gradient(A, b)
+function [xi,itr] = conj_gradient(A, b)
 %% Conjugate Gradient method for solving sparse matrix
 x0=b;
 r0=b-A*x0;
@@ -7,7 +7,7 @@ itr=0;
 ri=r0;
 pi=r0;
 xi=x0;
-tol=1e-10;
+tol=1e-6;
 while (1)
     alpha = ri'*ri/(pi'*A*pi);
     x1=xi+alpha*pi;

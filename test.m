@@ -10,7 +10,7 @@ I=speye(length(A));
 A=A+1e-1*I;
 x=sparse(rand(length(A),1)*1);
 b=A*x;
-tic;[x1 itr1]=jacobi(A,b);toc;
-tic;[x2 itr2] = gauss_seidel(A,b);toc;
-tic;[x3 itr3] = conj_gradient(A, b);toc;
-
+% tic;[x1,itr1] = jacobi(A,b);toc;
+% tic;[x2,itr2] = gauss_seidel(A,b);toc;
+% tic;[x3,itr3] = steepestdescent(A,b);toc;
+% tic;[x4,itr4] = conj_gradient(A, b);toc;
