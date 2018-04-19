@@ -14,3 +14,5 @@ b=A*x;
 % tic;[x2,itr2] = gauss_seidel(A,b);toc;
 % tic;[x3,itr3] = steepestdescent(A,b);toc;
 % tic;[x4,itr4] = conj_gradient(A, b);toc;
+% tic;[x5] = LUsolver(A,b);toc
+x6 = cholsolver(A,b);
