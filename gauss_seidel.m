@@ -8,7 +8,7 @@ x0 = sparse(zeros(length(A),1)); % Initial guess
 xi = x0;
 error = norm(A*xi-b);
 iter = 0;
-tol = 1e-6; % 
+tol = 1e-3; % 
 while error > tol  
 %     x1=inv(L+D)*(b-U*x0);
     xi = (L+D)\(b-U*xi);
