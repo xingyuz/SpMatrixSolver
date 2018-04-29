@@ -20,7 +20,7 @@ while norm(ri) > tol
     ri=r1;
     conv(iter,1) = norm(ri);
     if iter>=1000
-        warning('Terminate since iteration exceeded 1000');
+        warning('Terminate since iterations exceeded 1000');
         x=xi;
         break;
     end
